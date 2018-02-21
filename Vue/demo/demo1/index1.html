@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .color{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <aa></aa>
+    <bb></bb>
+    <cc age="16"></cc>
+    <input type="text" v-model="we">
+    <dd v-bind:message="we"></dd>
+
+    <ee v-for="items in item" v-bind:lis="items"></ee>
+
+    <p>{{count}}</p>
+    <button-counter v-on:increment="incrementCount"></button-counter>
+    <button-counter v-on:increment="incrementCount"></button-counter>
+    </br>
+    <select name="fruit" v-model="selected">
+        <option value="">北京</option>
+        <option value="河南">河南</option>
+        <option value="河北">河北</option>
+    </select>
+    <p>你的选择是： {{selected}}</p>
+    <label for="man">man</label>
+    <input type="radio" v-model="sex" name="sex" id="man" value="man">
+    <label for="woman">woman</label>
+    <input type="radio" id="woman" v-model="sex" name="sex" value="woman">
+    <p>我选择的性别是: {{sex}}</p>
+    <label for="hello">hello</label>
+    <input type="checkbox" value="hello" id="hello" v-model="checkName">
+    <label for="say">say</label>
+    <input type="checkbox" value="say" id="say" v-model="checkName">
+    <p>{{checkName}}</p>
+    <button v-on:click="count += 1">+</button>
+    <input type="text"  @keyup.left="alert" v-model="message">
+    <p  v-on:keyup.13="alert">这个按钮被点击了{{count}}次</p>
+    <button v-on:click="count -= 1">-</button>
+   <p v-bind:class="{ color:isColor }">{{name}}</p>
+    <p v-bind:style="styleObj">{{message}}</p>
+    <p v-bind:style="{ background: activeColor,fontSize:fontSize + 'px' }">{{message}}</p>
+</div>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+    Vue.component('aa',{
+        template: '<h1>这里就是vue的组件</h1>'
+    });
+    Vue.component('cc',{
+        props: ['age'],
+        template: '<p>{{age}}</p>'
+    });
+    Vue.component('dd',{
+        props: ['message'],
+        template: '<p>{{message}}</p>'
+    });
+    Vue.component('ee',{
+        props: ['lis'],
+        template: '<p>{{lis.text}}</p>'
+    });
+    Vue.component('button-counter',{
+        template: '<button v-on:click="increment">{{counter}}</button>',
+        data: function () {
+            return {
+                counter:0
+            }
+        },
+        methods: {
+            increment: function () {
+                this.counter += 1;
+                this.$emit('increment');
+            }
+        }
+    });
+    var child = {
+        template: '<p>我不是去全局</p>'
+    };
+    var vm = new Vue({
+        el: "#box",
+        data:{
+            we: '我的名字',
+            selected: '',
+            count: 0,
+            sex: 'woman',
+            isColor: true,
+            checkName: [],
+            message: '1,2,3,5,67',
+            name: "SerenityLi",
+            activeColor: 'green',
+            fontSize: 18,
+            styleObj: {
+                color: 'green',
+                fontSize: 24,
+                background: 'red',
+                'font-weight': 'bold'
+            },
+            item: [
+                {text: '水费'},
+                {text: '电费'},
+                {text: '话费'}
+            ]
+        },
+        components: {
+          bb: child
+        },
+        methods: {
+            alert:function () {
+                console.log('hello world!');
+            },
+            incrementCount: function () {
+                this.count +=1;
+            }
+        },
+        computed: {
+            site: {
+                get: function () {
+                    return this.name + this.message;
+                },
+                set: function (newName) {
+                    console.log(newName);
+                    var name = newName.split('').reverse().join('') + '想念';
+                    console.log(name);
+                    this.name = name;
+                }
+            }
+        }
+    });
+
+    vm.site = '我做好的工作';
+    // document.write('name:' + vm.name);
+</script>
+</body>
+</html>

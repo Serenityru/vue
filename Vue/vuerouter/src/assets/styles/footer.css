@@ -1,0 +1,19 @@
+.footer {
+    height: 0.5rem;
+    background: #fbfbfa;
+    display: -webkit-flex;
+    border-top: 1px solid #dbdbdb; }
+    .footer span {
+      width: 20%;
+      height: inherit;
+      text-align: center;
+      color: #555;
+      font-size: 0.12rem; }
+      .footer span i {
+        display: block;
+        color: #555;
+        font-size: 0.2rem;
+        margin-top: 0.05rem;
+        margin-bottom: 0.03rem; }
+    .footer .active .con, .footer .active i {
+      color: #de3e97 !important; }

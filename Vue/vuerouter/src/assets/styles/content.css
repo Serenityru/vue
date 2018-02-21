@@ -1,0 +1,92 @@
+.main {
+  -webkit-flex: 1;
+  overflow-y: scroll; }
+  .main .navbar {
+    height: 0.4rem;
+    background: #39424a;
+    padding-top: 0.08rem;
+    padding-bottom: 0.08rem;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    justify-content: space-between; }
+    .main .navbar li {
+      width: 24%;
+      box-sizing: border-box;
+      border-right: 1px solid #4a5259; }
+      .main .navbar li span {
+        display: block;
+        margin-left: 8%;
+        margin-right: 8%;
+        padding-bottom: 0.03rem;
+        color: #b2b7be;
+        text-align: center; }
+      .main .navbar li .bbottom {
+        border-bottom: 2px solid #f02387 !important;
+        color: #fff !important; }
+  .main #bannerBox {
+    width: 100%;
+    height: 1.5rem;
+    overflow: hidden; }
+    .main #bannerBox #banner {
+      width: 300%;
+      height: 100%;
+      display: -webkit-flex; }
+      .main #bannerBox #banner li {
+        width: 100%;
+        height: inherit; }
+        .main #bannerBox #banner li img {
+          width: 100%;
+          height: 100%; }
+  .main .bignav {
+    height: 1.8rem;
+    background: #fff;
+    display: -webkit-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #fafafa; }
+    .main .bignav .small {
+      width: 20%;
+      text-align: center;
+      font-size: 0.14rem; }
+      .main .bignav .small i {
+        font-size: 0.3rem;
+        color: lightseagreen;
+        display: block;
+        margin-top: 0.18rem;
+        margin-bottom: 0.1rem; }
+        .main .bignav .small:nth-child(2n) i {
+          color: #CF677A;}
+          .main .bignav .small:nth-child(4n) i {
+            color: #BD8F45;}
+  .main #list li {
+    height: 0.9rem;
+    border-bottom: 1px solid #eceded;
+    padding-top: 0.1rem;
+    background: #fafafa; }
+    .main #list li .left {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-left: 0.2rem;
+      margin-right: 0.2rem;
+      float: left; }
+      .main #list li .left img {
+        width: 100%;
+        height: 100%; }
+    .main #list li .right em {
+      display: block;
+      font-style: normal; }
+      .main #list li .right em:first-child {
+        font-size: 0.18rem;
+        color: #999;
+        margin-bottom: 0.15rem;
+        padding-right: 0.1rem; }
+      .main #list li .right em:last-child {
+        font-size: 0.16rem;
+        color: #f60;
+        padding-right: 0.1rem; }
+        .main #list li .right em:last-child i {
+          margin-left: 0.2rem;
+          font-style: normal;
+          color: #808080;
+          font-size: 0.14rem; 
+        }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+			
+		<menu-list></menu-list>
+	
+	</div>	
+	<script src=./data.json></script>
+	<script type="text/javascript" src="./vue.min.js"></script>
+	<script type="text/javascript">
+		const list = {
+			props: ['myList'],
+			data () {
+				return {
+					mypros: this.myList,
+					flag: false
+				}
+			},
+			methods: {
+				show () {
+					this.flag = !this.flag
+				}
+			}
+		}
+		Vue.component('menu-list',{
+			props: ['list'],
+			template: `{{list.title}}`
+		});
+		new Vue({
+			el: "#app",
+			data: {
+				list: data,
+				flag: false,
+				show: false
+			},
+			components:{
+				list	
+			},
+			methods: {
+				data () {
+					this.flag = !this.flag;
+				},
+				show () {
+					this.show = !this.show;
+				}
+			}	
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.box {
+  width: 496px;
+  height: 350px;
+  margin: 0 auto;
+  border: 1px solid red;
+  font-size: 16px; }
+
+.top {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid yellow; }
+  .top span {
+    padding: 15px 44px; }
+
+.bot > .content {
+  margin-top: 20px;
+  text-indent: 20px;
+  line-height: 40px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,167 @@
+body
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  font-size: .12rem
+
+#app
+  width: 100%
+  height: 100%
+  display: -webkit-flex
+  -webkit-flex-direction: column
+  .header
+    line-height: .44rem
+    background: #fbfbfa
+    display: -webkit-flex
+    padding-left: .1rem
+    padding-right: .1rem
+    border-bottom: 1px solid #dbdbdb
+    img
+      width: .7rem
+      height: .2rem
+      margin-right: .05rem
+      margin-top: .1rem
+    h1
+      -webkit-flex: 1
+      font-size: .14rem
+      color: #888
+      display: -webkit-flex
+      span
+        color: #555
+        i
+          vertical-align: sub
+          margin-right: .1rem
+          color: #555
+      .search
+        -webkit-flex: 1
+        input
+          width: 100%
+          height: .25rem
+          border-width: 0
+          border-radius: .15rem
+          text-align: center
+          color: #bfc0c3
+          font-size: .12rem
+          background: #efefef
+    i
+      font-size: .2rem
+      color: #9d9fa4
+      margin-top: .1rem
+      margin-left: .1rem
+
+.main
+  -webkit-flex: 1
+  overflow-y: scroll
+  .navbar
+    height: .4rem
+    background: #39424a
+    padding-top: .08rem
+    padding-bottom: .08rem
+    box-sizing: border-box
+    display: -webkit-flex
+    justify-content: space-between
+    li
+      width: 24%
+      box-sizing: border-box
+      border-right: 1px solid #4a5259
+      span
+        display: block
+        margin-left: 10%
+        margin-right: 10%
+        padding-bottom: .03rem
+        color: #b2b7be
+        text-align: center
+      .bbottom
+        border-bottom: 2px solid #f02387!important
+        color: #fff!important
+  #bannerBox
+    width: 100%
+    height: 1.5rem
+    overflow: hidden
+    #banner
+      width: 300%
+      height: 100%
+      display: -webkit-flex
+      li
+        width: 100%
+        height: inherit
+        img 
+          width: 100%
+          height: 100%
+  .bignav
+    height: 1.8rem
+    background: #fff
+    display: -webkit-flex
+    justify-content: space-between
+    flex-wrap: wrap
+    border-bottom: 1px solid #fafafa
+    .small
+      width: 20%
+      text-align: center
+      font-size: .14rem
+      i
+        font-size: .35rem
+        color: red
+        display: block
+        margin-top: .18rem
+        margin-bottom: .1rem
+  #list
+    li
+      height: .9rem
+      border-bottom: 1px solid #eceded
+      padding-top: .1rem
+      background: #fafafa
+      .left
+        width: .8rem
+        height: .8rem
+        margin-left: .2rem
+        margin-right: .2rem
+        float: left
+        img
+          width: 100%
+          height: 100%
+      .right
+        em
+          display: block
+          font-style: normal
+          &:first-child
+            font-size: .18rem
+            color: #999
+            margin-bottom: .15rem
+            padding-right: .1rem
+
+          &:last-child
+            font-size: .16rem
+            color: #f60
+            padding-right: .1rem
+            i
+              margin-left: .2rem
+              font-style: normal
+              color: #808080
+              font-size: .14rem
+
+
+
+.footer
+  height: .5rem
+  background: #fbfbfa
+  display: -webkit-flex
+  border-top: 1px solid #dbdbdb
+  span
+    width: 20%
+    height: inherit
+    text-align: center
+    color: #555
+    font-size: .12rem
+    i
+      display: block
+      color: #555
+      font-size: .2rem
+      margin-top: .05rem
+      margin-bottom: .03rem
+
+  .active, .active i
+    color: #de3e97!important

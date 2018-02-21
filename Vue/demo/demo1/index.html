@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="form">
+    <div>
+        <label for="man">男</label>
+        <input type="radio" id="man" value="man" name="sex" v-model="sex">
+    </div>
+    <div>
+        <label for="woman">女</label>
+        <input type="radio" id="woman" value="woman" name="sex" v-model="sex">
+    </div>
+    <div v-if="sex == 'man'">
+        我是男人
+    </div>
+    <div v-else>
+        我是女人
+    </div>
+    <abc>
+
+    </abc>
+</div>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+    Vue.component('abc',{
+        template: "<p>心想的事儿都能成</p>",
+        props: {
+            message: "消息提醒"
+        }
+    });
+    var child = {
+        template: "<span>今天是个好日子，</span>"
+    }
+    new Vue({
+        el: "#form",
+        sex: "man",
+        components: {
+            'abc': child
+        }
+
+    })
+
+</script>
+</body>
+</html>

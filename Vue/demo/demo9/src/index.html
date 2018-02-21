@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+</head>
+<body>
+<div id="box" class="box">
+    <header class="header">
+        <span>58 北京 <b class="triangle" style="transform: rotate(180deg); position: absolute;
+  top:.2rem;"></b></span>
+        <span><i class="icon iconfont icon-search"></i><input type="text" id="search" placeholder="找工作 找房子" v-model="sea"></span>
+        <span>发布 | 我的</span>
+    </header>
+    <main class="main">
+        <div class="list">
+            <ul>
+                <li><i class="icon iconfont icon-favor"></i> 招聘</li>
+                <li><i class="icon iconfont icon-favor"></i> 房产</li>
+                <li><i class="icon iconfont icon-favor"></i> 二手车新车</li>
+                <li><i class="icon iconfont icon-favor"></i> 二手</li>
+                <li><i class="icon iconfont icon-favor"></i> 宠物</li>
+                <li><i class="icon iconfont icon-favor"></i> 兼职</li>
+                <li><i class="icon iconfont icon-favor"></i> 本地</li>
+                <li><i class="icon iconfont icon-favor"></i> 家政</li>
+                <li><i class="icon iconfont icon-favor"></i> 金币夺宝</li>
+                <li><i class="icon iconfont icon-favor"></i> 送现金</li>
+            </ul>
+        </div>
+        <div class="swiper-container news" style="height: .5rem;line-height:.5rem;;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><em>热点</em><small>买房砍价技巧！说不定能省好几万</small></div>
+                <div class="swiper-slide"><em>精选</em><small>远嫁北方农村六年，晒晒我婆婆家，大家看如何</small></div>
+                <div class="swiper-slide"><em>热点</em><small>金融投资风险大，踏踏实实上班族</small></div>
+                <div class="swiper-slide"><em>精选</em><small>全国风景美，各地转一转</small></div>
+            </div>
+        </div>
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../static/images/banner_02.jpg"></div>
+                <div class="swiper-slide"><img src="../static/images/banner_02.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="recruit rel">
+            <h4 class="rel">全部招聘 <b class="triangle abs" style="transform: rotate(90deg)"></b></h4>
+            <p class="abs" style="top:.1rem;right:.1rem;"><span><i class="icon iconfont icon-copy"></i>写简历</span>
+                <span class="p10"><i class="icon iconfont icon-like"></i>写简历</span></p>
+            <div class="message">
+                <div style="border-top: 1px solid #eee">
+                    <span>工人</span><span>营业员</span><span>快递员</span><span>司机</span>
+                    <span>服务员</span><span>文员</span><span>销售</span><span>收银员</span>
+                    <span>促销导购</span><span>保安</span><span>厨师</span><span>保洁</span>
+                </div>
+                <div>
+                    <span>五险一金</span><span>包吃住</span><span>校招网申</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
